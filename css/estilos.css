@@ -1,0 +1,153 @@
+body
+{
+font-family: 'Dancing Script';
+}
+header{
+  animation: rebote 2s;
+}
+.contenedor-padre
+{
+  background-color: #5b7989;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-shadow: 2px 2px #02010a;
+  border-radius: 10px 10px 0 0;
+}
+.hijo1,.contenedor2
+{
+  width:50%;
+  color: white;
+}
+.hijo1
+{
+  padding-left: 8%;
+}
+.contenedor2
+{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.hijo2
+{
+  width:100%;
+  float: right;
+  padding: 3% 10% 3% 65%;
+}
+.hijo2>a
+{
+  color:white;
+}
+.hijo2>a[href^='index']
+{
+  text-decoration: none;
+}
+.contenedor-img
+{
+  width: 100%;
+}
+.hijo3,.contenedor-img2
+{
+  width:100%;
+}
+.hijo3
+{
+  background-color: #82c3a6;
+}
+.hijo3>#img1
+{
+  width:75%;
+  padding: 3% 12.5% 3% 12.5%;
+  filter: drop-shadow(2px 2px black);
+}
+.contenedor-img2
+{
+  background-color: #d5c75f;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.contenedor-img2>#img2,#img3
+{
+  width:50%;
+}
+#img2,#img3
+{
+  width:75%;
+  padding: 3% 12.5% 3% 12.5%;
+  filter: drop-shadow(2px 2px black );
+
+}
+#img2:hover
+{
+  transform: rotate(10deg);
+  filter: drop-shadow(2px 2px #82c3a6);
+}
+#img3:hover{
+  transform: translate(20px,-5px);
+  filter: drop-shadow(2px 2px #82c3a6);
+}
+#img2+a,#img3+a
+{
+  padding-left: 47%;
+  padding-bottom: 2%;
+  color: black;
+}
+footer
+{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+}
+.hijo6
+{
+  width:25%;
+  text-align: center;
+}
+h2+a, p+a
+{
+  color: black;
+  text-decoration: none;
+}
+@media screen and (max-width:900px)
+{
+  .hijo1,.hijo2,.hijo3,.hijo4,.hijo5,.hijo6
+  {
+    width:100%;
+  }
+  .contenedor-padre,.contenedor-img2,footer
+  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hijo1,.hijo2
+  {
+  padding: 0;
+  }
+  #img2+a,#img3+a
+  {
+    padding: 0;
+  }
+}
+@-webkit-keyframes rebote
+{
+  0%
+  {
+    margin-top: 150%;
+  }
+  60%
+  {
+    margin-top: -5%;
+  }
+  100%
+  {
+    margin-top: 0%;
+  }
+}
